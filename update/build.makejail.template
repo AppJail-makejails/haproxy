@@ -1,0 +1,13 @@
+ARG haproxy_install_dataplaneapi=0
+ARG haproxy_dataplaneapi_version=%%DATAPLANEAPI_VERSION%%
+
+INCLUDE options/options.makejail
+
+PKG haproxy
+
+RAW if [ "${haproxy_install_dataplaneapi}" != 0 ]; then
+    CMD fetch -o /tmp/dataplaneapi.tar.gz "https://github.com/haproxytech/dataplaneapi/releases/download/v${haproxy_dataplaneapi_version}/dataplaneapi_${haproxy_dataplaneapi_version}_freebsd_x86_64.tar.gz"
+    CMD mkdir -p /dataplaneapi
+    CMD tar -C /dataplaneapi -xf /tmp/dataplaneapi.tar.gz
+    CMD rm -f /tmp/dataplaneapi.tar.gz
+RAW fi
