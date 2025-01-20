@@ -16,7 +16,7 @@ appjail makejail \
     -o file=/usr/local/etc/haproxy.conf
 ```
 
-**Note**: DataplaneAPI is located in `/dataplaneapi` if you plane to use it.
+**Note**: Data Plane API is located in `/dataplaneapi` if you plane to use it.
 
 ### Arguments
 
