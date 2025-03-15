@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG haproxy_tag=13.4
+ARG haproxy_tag=13.5
 ARG haproxy_ajspec=gh+AppJail-makejails/haproxy
 
 FROM --entrypoint "${haproxy_ajspec}" haproxy:${haproxy_tag}
