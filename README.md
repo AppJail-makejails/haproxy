@@ -27,7 +27,7 @@ appjail makejail \
 
 | Tag                     | Arch     | Version            | Type   | `haproxy_install_dataplaneapi` | `haproxy_dataplaneapi_version` |
 | ----------------------- | -------- | ------------------ | ------ | ------------------------------ | ------------------------------ |
-| `13.5`              | `amd64`  | `13.5-RELEASE` | `thin` |              `0`               | `3.1.5`     |
-| `13.5-dataplaneapi` | `amd64`  | `13.5-RELEASE` | `thin` |              `1`               | `3.1.5`     |
-| `14.2`              | `amd64`  | `14.2-RELEASE` | `thin` |              `0`               | `3.1.5`     |
-| `14.2-dataplaneapi` | `amd64`  | `14.2-RELEASE` | `thin` |              `1`               | `3.1.5`     |
+| `13.5`              | `amd64`  | `13.5-RELEASE` | `thin` |              `0`               | `3.2.0`     |
+| `13.5-dataplaneapi` | `amd64`  | `13.5-RELEASE` | `thin` |              `1`               | `3.2.0`     |
+| `14.2`              | `amd64`  | `14.2-RELEASE` | `thin` |              `0`               | `3.2.0`     |
+| `14.2-dataplaneapi` | `amd64`  | `14.2-RELEASE` | `thin` |              `1`               | `3.2.0`     |
