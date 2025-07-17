@@ -16,7 +16,7 @@ appjail makejail \
     -o file=/usr/local/etc/haproxy.conf
 ```
 
-**Note**: Data Plane API is located in `/dataplaneapi` if you plane to use it.
+**Note**: Previously Data Plane API was included in the `/dataplaneapi` directory, however now it is installed from the package, so it starts like any other `rc(8)` script.
 
 ### Arguments
 
@@ -25,9 +25,9 @@ appjail makejail \
 
 ## Tags
 
-| Tag                     | Arch     | Version            | Type   | `haproxy_install_dataplaneapi` | `haproxy_dataplaneapi_version` |
-| ----------------------- | -------- | ------------------ | ------ | ------------------------------ | ------------------------------ |
-| `13.5`              | `amd64`  | `13.5-RELEASE` | `thin` |              `0`               | `3.2.0`     |
-| `13.5-dataplaneapi` | `amd64`  | `13.5-RELEASE` | `thin` |              `1`               | `3.2.0`     |
-| `14.3`              | `amd64`  | `14.3-RELEASE` | `thin` |              `0`               | `3.2.0`     |
-| `14.3-dataplaneapi` | `amd64`  | `14.3-RELEASE` | `thin` |              `1`               | `3.2.0`     |
+| Tag                     | Arch     | Version            | Type   | `haproxy_install_dataplaneapi` |
+| ----------------------- | -------- | ------------------ | ------ | ------------------------------ |
+| `13.5`              | `amd64`  | `13.5-RELEASE` | `thin` |              `0`               |
+| `13.5-dataplaneapi` | `amd64`  | `13.5-RELEASE` | `thin` |              `1`               |
+| `14.3`              | `amd64`  | `14.3-RELEASE` | `thin` |              `0`               |
+| `14.3-dataplaneapi` | `amd64`  | `14.3-RELEASE` | `thin` |              `1`               |

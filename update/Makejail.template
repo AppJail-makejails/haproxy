@@ -7,3 +7,8 @@ FROM --entrypoint "${haproxy_ajspec}" haproxy:${haproxy_tag}
 
 SYSRC haproxy_enable=YES
 SERVICE haproxy start
+
+RAW if appjail cmd jexec "${APPJAIL_JAILNAME}" if [ -x /usr/local/etc/rc.d/dataplaneapi ]; then
+	SYSRC dataplaneapi_enable=YES
+	SERVICE dataplaneapi start
+RAW fi
