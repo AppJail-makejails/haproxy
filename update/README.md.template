@@ -29,5 +29,5 @@ appjail makejail \
 | ----------------------- | -------- | ------------------ | ------ | ------------------------------ |
 | `%%TAG1%%`              | `amd64`  | `%%TAG1%%-RELEASE` | `thin` |              `0`               |
 | `%%TAG1%%-dataplaneapi` | `amd64`  | `%%TAG1%%-RELEASE` | `thin` |              `1`               |
-| `%%TAG2%%`              | `amd64`  | `%%TAG2%%-RELEASE` | `thin` |              `0`               |
-| `%%TAG2%%-dataplaneapi` | `amd64`  | `%%TAG2%%-RELEASE` | `thin` |              `1`               |
+| `%%TAG2%%`              | `amd64`  | `%%TAG2%%` | `thin` |              `0`               |
+| `%%TAG2%%-dataplaneapi` | `amd64`  | `%%TAG2%%` | `thin` |              `1`               |

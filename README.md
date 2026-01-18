@@ -20,14 +20,14 @@ appjail makejail \
 
 ### Arguments
 
-* `haproxy_tag` (default: `13.5`): see [#tags](#tags).
+* `haproxy_tag` (default: `14.3`): see [#tags](#tags).
 * `haproxy_ajspec` (default: `gh+AppJail-makejails/haproxy`): Entry point where the `appjail-ajspec(5)` file is located.
 
 ## Tags
 
 | Tag                     | Arch     | Version            | Type   | `haproxy_install_dataplaneapi` |
 | ----------------------- | -------- | ------------------ | ------ | ------------------------------ |
-| `13.5`              | `amd64`  | `13.5-RELEASE` | `thin` |              `0`               |
-| `13.5-dataplaneapi` | `amd64`  | `13.5-RELEASE` | `thin` |              `1`               |
 | `14.3`              | `amd64`  | `14.3-RELEASE` | `thin` |              `0`               |
 | `14.3-dataplaneapi` | `amd64`  | `14.3-RELEASE` | `thin` |              `1`               |
+| `15`              | `amd64`  | `15` | `thin` |              `0`               |
+| `15-dataplaneapi` | `amd64`  | `15` | `thin` |              `1`               |
