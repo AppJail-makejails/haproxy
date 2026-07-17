@@ -1,14 +1,5 @@
-INCLUDE options/options.makejail
+ARG haproxy_from=ghcr.io/appjail-makejails/haproxy
+ARG haproxy_tag=latest
 
-ARG haproxy_tag=14.3
-ARG haproxy_ajspec=gh+AppJail-makejails/haproxy
-
-FROM --entrypoint "${haproxy_ajspec}" haproxy:${haproxy_tag}
-
-SYSRC haproxy_enable=YES
-SERVICE haproxy start
-
-RAW if appjail cmd jexec "${APPJAIL_JAILNAME}" if [ -x /usr/local/etc/rc.d/dataplaneapi ]; then
-	SYSRC dataplaneapi_enable=YES
-	SERVICE dataplaneapi start
-RAW fi
+OPTION overwrite=force
+OPTION from=${haproxy_from}:${haproxy_tag}

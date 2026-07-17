@@ -1,9 +1,0 @@
-ARG haproxy_install_dataplaneapi=0
-
-INCLUDE options/options.makejail
-
-PKG haproxy
-
-RAW if [ "${haproxy_install_dataplaneapi}" != 0 ]; then
-	PKG dataplaneapi
-RAW fi

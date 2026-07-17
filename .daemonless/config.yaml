@@ -1,0 +1,102 @@
+build:
+  variants:
+    - tag: 15.1-24
+      containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "24"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-26
+      containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "26"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-28
+      containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "28"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-30
+      containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "30"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-32
+      containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "32"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-33
+      containerfile: Containerfile
+      aliases: ["latest"]
+      default: true
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "33"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-devel
+      containerfile: Containerfile
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "-devel"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-24-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "24"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-26-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "26"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-28-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "28"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-30-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "30"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-32-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "32"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-33-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "33"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
+    - tag: 15.1-devel-api
+      containerfile: Containerfile.api
+      args:
+        FREEBSD_RELEASE: "15.1"
+        HAPROXYVER: "-devel"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]

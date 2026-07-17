@@ -1,0 +1,46 @@
+ARG FREEBSD_RELEASE
+
+FROM ghcr.io/appjail-makejails/core:${FREEBSD_RELEASE}
+
+ARG NO_PKGCLEAN
+ARG HAPROXYVER
+
+LABEL org.opencontainers.image.title="HAProxy" \
+    org.opencontainers.image.description="Reliable, high performance TCP/HTTP load balancer" \
+    org.opencontainers.image.source="https://github.com/AppJail-makejails/haproxy" \
+    org.opencontainers.image.url="https://github.com/AppJail-makejails/haproxy" \
+    org.opencontainers.image.vendor="DtxdF" \
+    org.opencontainers.image.authors="Jesús Daniel Colmenares Oviedo <dtxdf@disroot.org>"
+
+RUN set -xe; \
+    \
+    pkg update; \
+    pkg install -U \
+        haproxy${HAPROXYVER} \
+        dataplaneapi \
+        FreeBSD-bsdconfig \
+        FreeBSD-utilities \
+        dasel \
+        doas; \
+    \
+    if [ -z "${NO_PKGCLEAN}" ]; then \
+        pkg clean -a; \
+        rm -rf /var/cache/pkg/* /var/db/pkg/repos/*; \
+    fi; \
+    \
+    chmod 755 /usr/local/sbin
+
+# Necessary for Data Plane API.
+ENV AUTOMEMLIMIT_EXPERIMENT=system
+
+COPY entrypoint.sh /
+
+RUN chmod +x /entrypoint.sh && \
+    mkdir -p /usr/local/etc/haproxy
+
+COPY haproxy.cfg /usr/local/etc/haproxy
+COPY dataplaneapi.yaml /usr/local/etc/haproxy/dataplaneapi.yaml
+COPY doas.conf /usr/local/etc/doas.conf
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["dataplaneapi"]
