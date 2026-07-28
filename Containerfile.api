@@ -19,7 +19,6 @@ RUN set -xe; \
         haproxy${HAPROXYVER} \
         dataplaneapi \
         FreeBSD-bsdconfig \
-        FreeBSD-utilities \
         dasel \
         doas; \
     \
