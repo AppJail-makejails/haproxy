@@ -1,5 +1,6 @@
 ARG haproxy_from=ghcr.io/appjail-makejails/haproxy
 ARG haproxy_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${haproxy_from}:${haproxy_tag}
