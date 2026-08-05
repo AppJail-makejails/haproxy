@@ -118,13 +118,6 @@ More information and examples in the [official documentation](https://www.haprox
 ```yaml
 build:
   variants:
-    - tag: 15.1-24
-      containerfile: Containerfile
-      args:
-        FREEBSD_RELEASE: "15.1"
-        HAPROXYVER: "24"
-        NO_PKGCLEAN: "1"
-      cache_dirs: ["pkgcache0:/var/cache/pkg"]
     - tag: 15.1-26
       containerfile: Containerfile
       args:
@@ -167,13 +160,6 @@ build:
       args:
         FREEBSD_RELEASE: "15.1"
         HAPROXYVER: "-devel"
-        NO_PKGCLEAN: "1"
-      cache_dirs: ["pkgcache0:/var/cache/pkg"]
-    - tag: 15.1-24-api
-      containerfile: Containerfile.api
-      args:
-        FREEBSD_RELEASE: "15.1"
-        HAPROXYVER: "24"
         NO_PKGCLEAN: "1"
       cache_dirs: ["pkgcache0:/var/cache/pkg"]
     - tag: 15.1-26-api
