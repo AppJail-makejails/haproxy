@@ -23,7 +23,7 @@ if [ "$1" = 'haproxy' ]; then
     set -- haproxy -W -db "$@"
 elif [ "$1" = 'dataplaneapi' ]; then
     shift # "haproxy"
-    chown -R noroot:noroot /usr/local/etc/haproxy
+    change_owner /usr/local/etc/haproxy
     dasel put -f /usr/local/etc/haproxy/dataplaneapi.yaml -r yaml -t int -v "${PUID}" dataplaneapi.uid
     if ! service haproxy status > /dev/null; then
         sysrc haproxy_enable="YES"
