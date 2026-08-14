@@ -15,7 +15,7 @@ LABEL org.opencontainers.image.title="HAProxy" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U haproxy${HAPROXYVER}; \
+    pkg install haproxy${HAPROXYVER}; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \

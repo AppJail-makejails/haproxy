@@ -15,7 +15,7 @@ LABEL org.opencontainers.image.title="HAProxy" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U \
+    pkg install \
         haproxy${HAPROXYVER} \
         dataplaneapi \
         FreeBSD-bsdconfig \
