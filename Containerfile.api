@@ -27,11 +27,7 @@ RUN set -xe; \
         rm -rf /var/cache/pkg/* /var/db/pkg/repos/*; \
     fi; \
     \
-    chmod 755 /usr/local/sbin; \
-    \
-# Workaround until podman package includes the fixes for the setuid bit.
-# The port already has the fix, but the package does not.
-    chmod 4755 /usr/local/bin/doas
+    chmod 755 /usr/local/sbin
 
 # Necessary for Data Plane API.
 ENV AUTOMEMLIMIT_EXPERIMENT=system
